@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Избраннные ценные бумаги</title>
+</head>
+<body>
+    <h2>Избранное Investing</h2>
+    <ul>
+        {% for security in all %}
+            <li>{{ security.0 }}, {{ security.1 }}, {{ security.2 }}, {{ security.3 }}, {{ security.4 }}</li>
+        {% endfor %}
+    </ul>
+	
+	
+    <img src="{% static 'Security/img/SBER.ME.png' %}", alt="ERROR">
+	<img src="{% static 'Security/img/YNDX.ME.png' %}", alt="ERROR">
+    <img src="{% static 'Security/img/FXIT.ME.png' %}", alt="ERROR">
+
+
+</body>
+</html>
