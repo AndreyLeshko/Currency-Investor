@@ -1,0 +1,38 @@
+/* ------------------ NAVBAR --------------------*/
+nav {
+	display; flex;
+}
+
+.navbar {
+    background: transparent;
+    font-size: 25px;
+    color: white;
+    padding-bottom: 10px;
+	display: flex;
+	align-items: center;
+}
+
+#div-nav-sign {
+	display: inline-block;
+	flex: 10%;
+}
+
+#div-nav-links {
+	flex: 90%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+#nav-sign {
+	background: transparent;
+	padding: 0px;
+
+
+}
+
+.navbar-link {
+	padding-right: 10px;
+	padding-left: 10px;
+	color: white;
+	display: inline;	
+}

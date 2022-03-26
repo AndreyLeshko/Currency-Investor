@@ -1,14 +1,13 @@
 body {
-    background: url('../img/back3.jpg');
+    background: url('../img/back4.jpg');
     background-attachment: scroll;
     padding: 30px;
-    padding-top: 5px
+    padding-top: 10px
 }
 
 a {
 color: white;
 position: right;
-
 }
 
 p {
@@ -17,23 +16,27 @@ p {
     border: 2px solid;
     border-radius: 20px;
     border-color: white;
-    padding: 20px
+	padding: 10px;
 }
 
-.navbar {
-    background: transparent;
-    font-size: 25px;
-    color: white;
-    padding: 10px
-    object-position: 50px 50px;
-    display: flex;
-    justify-content: flex-end;
+h2 {
+	margin:10px;
+	
 }
+
+
+
+
+/* --------------- -------------------------------*/
 .help_cites {
     font-size: 30px;
     color: white;
-    background-color: #240678;
+    background: transparent;
     border: 2px solid white;
+	border-radius: 20px;
     padding-bottom: 10px;
-    object-position: 50px 50px;
+    object-position: center;
 }
+
+
+

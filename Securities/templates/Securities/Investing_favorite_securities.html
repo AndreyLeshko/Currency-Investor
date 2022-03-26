@@ -1,24 +1,39 @@
+{% extends 'Securities/base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Избраннные ценные бумаги</title>
-</head>
-<body>
-    <h2>Избранное Investing</h2>
-    <ul>
-        {% for security in all %}
-            <li>{{ security.0 }}, {{ security.1 }}, {{ security.2 }}, {{ security.3 }}, {{ security.4 }}</li>
-        {% endfor %}
-    </ul>
-	
-	
-    <img src="{% static 'Security/img/SBER.ME.png' %}", alt="ERROR">
-	<img src="{% static 'Security/img/YNDX.ME.png' %}", alt="ERROR">
-    <img src="{% static 'Security/img/FXIT.ME.png' %}", alt="ERROR">
 
 
-</body>
-</html>
+{% block title %}
+    Избранные акции
+{% endblock %}
+
+
+{% block css_links %}
+    <link rel="stylesheet" href="{% static 'Security/css/menu.css' %}?20220325">
+	<link rel="stylesheet" href="{% static 'Security/css/Investing_favorite_securities.css' %}?20220325">
+
+{% endblock %}
+
+
+{% block page_content %}
+	<div id="list-securities">
+		<h2>Избранное Investing</h2>
+		<ul>
+			{% for security in all %}
+				<li>{{ security.0 }}, {{ security.1 }}, {{ security.2 }}, {{ security.3 }}, {{ security.4 }}</li>
+			{% endfor %}
+		</ul>
+	</div>
+	
+	<div id="graphics">
+		<div class="price_graph">
+			<img src="{% static 'Security/img/SBER.ME.png' %}", alt="ERROR">
+		</div>
+		<div>
+			<img class="price_graph" src="{% static 'Security/img/YNDX.ME.png' %}", alt="ERROR">
+		</div>
+		<div>
+			<img class="price_graph" src="{% static 'Security/img/AAPL.png' %}", alt="ERROR">
+		</div>
+	</div>
+{% endblock %}

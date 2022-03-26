@@ -1,0 +1,23 @@
+#list-securities {
+	color: white;
+	background-color: rgba(0, 0, 0, 0.7);
+	border: 2px solid white;
+	border-radius: 20px;
+	margin: 10px;
+}
+
+#graphics {
+	display: block;
+	justify-content: center;
+	object-position: 50%;
+	
+}
+
+.price_graph {
+	display: block;
+	justify-content: center;
+}
+
+.list-securities {
+	width: 70%;
+}

@@ -10,4 +10,5 @@ def show_securities(request):
 
 def show_menu(request):
     return render(request, 'Securities/menu.html')
+    # return render(request, 'test.html')
 

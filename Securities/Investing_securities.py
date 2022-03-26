@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import datetime
 # from ..Investor.settings import BASE_DIR
 
-personal_data = {'email': 'andreyleshko2001@gmail.com', 'password': '0901toyota'}
+personal_data = {'email': 'andreyleshko2001@gmail.com', 'password': '12Qwerty'}
 HEADERS = {'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 YaBrowser/21.11.4.727 Yowser/2.5 Safari/537.36',
            'accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'}
 
@@ -41,15 +41,29 @@ def portfolio_securities_to_file(): # создаст файл с информа�
     file.close()
 
 def security_graph():
-    securitiess = ['SBER.ME', 'YNDX.ME', 'FXIT.ME']
+    securities = ['AAPL', 'SBER.ME', 'YNDX.ME']
     current_date = datetime.datetime.today()
-    start_data = datetime.datetime.today() - datetime.timedelta(days=14)
-    for i in securitiess:
-        data = yf.download(i, start_data, current_date)
+    start_data = datetime.datetime.today() - datetime.timedelta(days=60)
+    for i in securities:
+        '''data = yf.download(i, start_data, current_date)
         data['Adj Close'].plot()
         plt.title(i)
-        plt.savefig(f'../static/Security/img/{i}.png')
-        # plt.savefig(f'{BASE_DIR}/{i}.png')
+        if __name__ == "__main__":
+            plt.savefig(f'{i}.png')
+        else:
+            plt.savefig(f'Securities/static/Security/img/{i}.png')
+        '''
+        data = yf.download(i, start_data, current_date)
+        fig = plt.figure(figsize=(5, 5))
+        ax = fig.add_subplot()
+        ax.plot(data['Adj Close'], '-m')
+        ax.grid()
+        plt.xticks(rotation=90)
+        # plt.show()
+        if __name__ == "__main__":
+            plt.savefig(f'{i}.png')
+        else:
+            plt.savefig(f'Securities/static/Security/img/{i}.png')
 
 
 
