@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from Securities import views
+from Frame.views import show_securities, show_menu, blog
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('favorite-securities/', views.show_securities),
-    path('menu/', views.show_menu),
+    path('favorite-securities/', show_securities),
+    path('menu/', show_menu),
+    path('blog/', blog),
+    path('', show_menu),
 ]

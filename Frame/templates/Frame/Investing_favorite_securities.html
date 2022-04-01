@@ -1,4 +1,4 @@
-{% extends 'Securities/base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
 
@@ -9,8 +9,8 @@
 
 
 {% block css_links %}
-    <link rel="stylesheet" href="{% static 'Security/css/menu.css' %}?20220325">
-	<link rel="stylesheet" href="{% static 'Security/css/Investing_favorite_securities.css' %}?20220325">
+    <link rel="stylesheet" href="{% static 'Frame/css/menu.css' %}?20220325">
+	<link rel="stylesheet" href="{% static 'Frame/css/Investing_favorite_securities.css' %}?20220325">
 
 {% endblock %}
 
@@ -24,16 +24,16 @@
 			{% endfor %}
 		</ul>
 	</div>
-	
+
 	<div id="graphics">
 		<div class="price_graph">
-			<img src="{% static 'Security/img/SBER.ME.png' %}", alt="ERROR">
+			<img src="{% static 'Frame/img/SBER.ME.png' %}", alt="ERROR">
 		</div>
 		<div>
-			<img class="price_graph" src="{% static 'Security/img/YNDX.ME.png' %}", alt="ERROR">
+			<img class="price_graph" src="{% static 'Frame/img/YNDX.ME.png' %}", alt="ERROR">
 		</div>
 		<div>
-			<img class="price_graph" src="{% static 'Security/img/AAPL.png' %}", alt="ERROR">
+			<img class="price_graph" src="{% static 'Frame/img/AAPL.png' %}", alt="ERROR">
 		</div>
 	</div>
 {% endblock %}

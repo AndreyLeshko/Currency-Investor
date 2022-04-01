@@ -63,7 +63,7 @@ def security_graph():
         if __name__ == "__main__":
             plt.savefig(f'{i}.png')
         else:
-            plt.savefig(f'Securities/static/Security/img/{i}.png')
+            plt.savefig(f'Frame/static/Frame/img/{i}.png')
 
 
 
