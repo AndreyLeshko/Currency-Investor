@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block title %}
+    Log In
+{% endblock %}
+
+
+{% block css_links %}
+    <link rel="stylesheet" href="{% static 'Forum/css/log-in.css' %}?20220722">
+{% endblock %}
+
+
+{% block page_content %}
+<div class="all-content">
+    <div class="block-authorize">
+        <div class="log-password">
+            <form action="." method="post">
+                <!-- <table>
+                    {{ form }}
+                </table> -->
+                {{ form.as_p }}
+                {% csrf_token %}
+                <p><input type="submit" value="Submit"></p>
+            </form>
+
+        </div>
+
+        <!-- <a href="#" class='submit-button'>Submit</a> -->
+    </div>
+</div>
+
+
+
+
+{% endblock page_content %}

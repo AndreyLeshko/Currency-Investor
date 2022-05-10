@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    New Post
+{% endblock title %}
+
+
+{% block css_links %}
+    <link rel="stylesheet" href="{% static 'Blog/css/add-post.css' %}?20220813">
+{% endblock css_links %}
+
+{% block page_content %}
+    <div class="form">
+        <form class="" method="post">
+            <table>
+                {{ form }}
+            </table>
+            <input type="submit" value="Send">
+            {% csrf_token %}
+        </form>
+
+    </div>
+
+
+{% endblock page_content %}

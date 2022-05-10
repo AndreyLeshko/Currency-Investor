@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block title %}
+    Forum
+{% endblock %}
+
+
+{% block css_links %}
+    <link rel="stylesheet" href="{% static 'Forum/css/forum-main.css' %}?20220722">
+{% endblock %}
+
+
+{% block page_content %}
+    <div class="log-in">
+        <a href="{% url 'login' %}" class="log-in-link">Log In</a>
+    </div>
+
+<h1>This is a forum</h1>
+
+{% endblock page_content %}

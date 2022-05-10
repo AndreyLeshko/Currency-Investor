@@ -94,7 +94,8 @@ def portfolio_securities():
     # security_graph()
     return all_securities
 
-
+if __name__ == '__main__':
+    portfolio_securities_to_file()
 
 
 

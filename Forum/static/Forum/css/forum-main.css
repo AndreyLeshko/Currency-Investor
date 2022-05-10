@@ -1,0 +1,21 @@
+body {
+    background: url('../img/forum-background.jpg');
+    background-attachment: scroll;
+    padding: 30px;
+    padding-top: 10px
+}
+
+.log-in {
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: white;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+.log-in-link {
+    color: white;
+    font-size: 20px;
+}

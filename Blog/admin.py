@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Post
+from .models import Post, Blog_User
+
 
 #admin.site.register(Post)
 
@@ -10,3 +11,7 @@ class PostAdmin(admin.ModelAdmin):
     search_fields = ('author', 'title', 'body')
     prepopulated_fields = {'slug':('title',)}
     raw_id_fields = ('author',)
+
+@admin.register(Blog_User)
+class Blog_User_Admin(admin.ModelAdmin):
+    list_display = ('nickname', 'status', 'password')

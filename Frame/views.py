@@ -11,7 +11,7 @@ def show_securities(request):
 
 def show_menu(request):
     return render(request, 'Frame/menu.html')
-    # return render(request, 'test.html')
+    # return render(request, 'base.html')
 
 def start_page(request):
     return HttpResponse('Hello')

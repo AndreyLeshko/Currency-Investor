@@ -4,17 +4,36 @@
 
 
 {% block title %}
-    Menu
+    My Blog
 {% endblock title %}
 
 
 {% block css_links %}
-    <link rel="stylesheet" href="{% static 'Frame/css/menu.css' %}?20220324">
+    <link rel="stylesheet" href="{% static 'Blog/css/blog-main.css' %}?20220513">
 {% endblock css_links %}
 
 
 {% block page_content %}
-    <h1>XUY</h1>
+    <div class="under-navbar">
+        <div class="new-post-button">
+            <a class="new-post-button-link" href="/blog/add-post/">Добавить пост</a>
+        </div>
+    </div>
 
 
+    <div class="list_of_posts">
+        {% for post in posts %}
+            <div class="post">
+                <div class="post-title">
+                    <p class="post-title-text">{{ post }}</p>
+                </div>
+                <div class="post-body">
+                    {{ post.body }}
+                </div>
+                <div class="post-author">
+                    Author: {{ post.author }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock page_content%}

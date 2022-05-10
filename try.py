@@ -1,13 +1,7 @@
-import yfinance as yf
-import matplotlib.pyplot as plt
-import datetime
+import random
 
-current_date = datetime.date.today()
-week_before = datetime.date.today() - datetime.timedelta(days=30)
-
-data = yf.download('SBER.ME', week_before, current_date)
-# print(data['Adj Close'])
-data['Adj Close'].plot()
-plt.title('SBER')
-# plt.savefig('sberbank.png', transparent=True)
-plt.show()
+my_set = set()
+while len(my_set) < 100:
+    num = random.randint(1000000, 9999999)
+    my_set.add(num)
+print(*my_set, sep='\n')
