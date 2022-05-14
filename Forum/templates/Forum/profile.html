@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block title %}
+    Мой профиль
+{% endblock %}
+
+
+{% block css_links %}
+    <link rel="stylesheet" href="{% static 'Forum/css/profile.css' %}?20220722">
+{% endblock %}
+
+
+{% block page_content %}
+    <h1>Мой профиль</h1>
+    <p><a href="{% url 'password_change' %}">Сменить пароль</a></p>
+    <p><a href="{% url 'logout' %}">Выйти</a> из аккаунта</p>
+{% endblock page_content %}

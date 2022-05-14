@@ -1,23 +1,23 @@
-/* ------------------ NAVBAR --------------------*/
+
 body {
-    background: url('../img/background-main.jpg');
+    background: url('static/img/background-main.jpg');
     background-attachment: scroll;
-    padding: 30px;
-    padding-top: 10px
+    /* padding: 30px; */
+    /* padding-top: 10px; */
+    display: block;
+
 }
 
-
-nav {
-	display; flex;
-}
+/*------------ Navbar --------------*/
 
 .navbar {
-    background: transparent;
+    background-color: rgba(0, 0, 0, 0.5);
     font-size: 25px;
-    color: white;
     padding-bottom: 10px;
 	display: flex;
 	align-items: center;
+    padding: 5px;
+    margin-bottom: 20px;
 }
 
 #div-nav-sign {
@@ -35,8 +35,6 @@ nav {
 #nav-sign {
 	background: transparent;
 	padding: 0px;
-
-
 }
 
 .navbar-link {
@@ -44,4 +42,25 @@ nav {
 	padding-left: 10px;
 	color: white;
 	display: inline;
+}
+
+/* -------------Page---------------- */
+
+.page {
+    display: flex;
+    justify-content: center;
+}
+
+.block-page-content {
+    display: inline-block;
+    width: 70%;
+}
+
+/* -----------------Sidebar ---------------*/
+
+.sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 15%;
+    border: 2px solid white;
 }
